@@ -1,0 +1,12 @@
+{
+  "name": "gp-cyber-triage-tool",
+  "version": "0.1.0",
+  "description": "NHS GP cyber incident triage tool, front end plus a small Node/Express backend for logging completed incidents.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

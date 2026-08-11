@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GP Cyber Incident Triage — Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="topband">
+  <div class="topband-inner">
+    <div class="brandmark">
+      <div class="mark" id="brandIconSlot"></div>
+      <div class="brand">
+        <h1>GP Cyber Incident Triage</h1>
+        <p>Prototype build — dissertation project, not an official NHS product</p>
+      </div>
+    </div>
+    <div class="progress-badge">
+      <div class="plabel">4 of 7 categories verified</div>
+      <div class="segbar" id="segbar"></div>
+    </div>
+  </div>
+</div>
+<main class="wrap" id="app"></main>
+<footer class="foot">
+  Every step shown by this tool is traced to a cited source (NIST SP 800-61r3, NCSC, ICO, or the NHS DSPT). This is a working prototype built to test whether verified guidance can be represented as a transparent rule based tool. It does not replace your practice's own incident response plan or direct contact with the ICO, NCSC, or NHS England in a live incident.
+</footer>
+
+<!-- Data and rules first, in plain script tags (no bundler, no build step). -->
+<script src="/js/data.js"></script>
+<script src="/js/categories/personal-data-breach.js"></script>
+<script src="/js/categories/ransomware.js"></script>
+<script src="/js/categories/phishing.js"></script>
+<script src="/js/categories/business-email-compromise.js"></script>
+<script src="/js/icons.js"></script>
+<!-- App logic last, since it calls render() immediately. -->
+<script src="/js/app.js"></script>
+</body>
+</html>

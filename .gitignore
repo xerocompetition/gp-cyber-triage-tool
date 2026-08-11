@@ -1,0 +1,4 @@
+node_modules/
+data/incidents.json
+data/*.corrupted-*
+.DS_Store
